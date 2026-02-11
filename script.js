@@ -3,7 +3,7 @@
    Dynamic Form-Based Logic
    ================================ */
 
-alert("JS connected");
+
 
 
 // Configuration Constants
@@ -476,5 +476,6 @@ function resetForm() {
 window.addEventListener('load', () => {
     addSubjectRow();
 });
+
 
 
