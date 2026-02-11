@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎓 Student Attendance Analyzer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 Student Attendance Analyzer</h1>
+            <p class="subtitle">Enter your attendance data and get instant insights</p>
+        </header>
+
+        <main>
+            <!-- Input Section -->
+            <section class="input-section">
+                <h2>📝 Enter Your Subjects</h2>
+                <p class="instruction">
+                    Add your subjects along with classes held and attended. Each row is one subject.
+                </p>
+                
+                <!-- Subject Rows Container -->
+                <div id="subjectsInputContainer" class="subjects-input-container">
+                    <!-- Rows will be added dynamically here -->
+                </div>
+
+                <!-- Add Subject Button -->
+                <button id="addSubjectBtn" class="btn-add-subject">
+                    ➕ Add Subject
+                </button>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button id="analyzeBtn" class="btn-analyze">
+                        ✅ Analyze Attendance
+                    </button>
+
+                    <button id="resetBtn" class="btn-reset">
+                        🔄 Reset
+                    </button>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section id="resultsSection" class="results-section hidden">
+                <!-- Overall Status Card -->
+                <div id="statusCard" class="status-card">
+                    <div class="status-emoji" id="statusEmoji"></div>
+                    <div class="status-text">
+                        <h2 id="statusMessage"></h2>
+                        <p id="statusSubtext"></p>
+                    </div>
+                </div>
+
+                <!-- Key Metrics -->
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <span class="metric-label">Overall Attendance</span>
+                        <span class="metric-value" id="overallPercentage">0%</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-label">Total Classes</span>
+                        <span class="metric-value" id="totalClasses">0</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-label">Attended</span>
+                        <span class="metric-value" id="totalAttended">0</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-label" id="actionLabel"></span>
+                        <span class="metric-value action-value" id="actionNumber">0</span>
+                    </div>
+                </div>
+
+                <!-- Action Message -->
+                <div id="actionMessage" class="action-message"></div>
+
+                <!-- Subject-wise Breakdown -->
+                <section class="subjects-section">
+                    <h3>📊 Subject-wise Breakdown</h3>
+                    <div id="subjectsContainer" class="subjects-container"></div>
+                </section>
+
+                <!-- Tips Section -->
+                <section class="tips-section">
+                    <h3>💡 Quick Tips</h3>
+                    <div id="tipsContainer" class="tips-container"></div>
+                </section>
+            </section>
+
+            <!-- Error Section -->
+            <section id="errorSection" class="error-section hidden">
+                <div class="error-message" id="errorMessage"></div>
+                <button class="btn-close-error" onclick="hideError()">
+                    ✕ Close
+                </button>
+            </section>
+        </main>
+
+        <footer>
+            <p>💝 Made for students, by understanding student life | v2.0</p>
+        </footer>
+        <footer>
+  <p class="credit">Developed by K S P</p>
+</footer>
+
+        
+  
+
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
