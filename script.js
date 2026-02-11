@@ -3,6 +3,9 @@
    Dynamic Form-Based Logic
    ================================ */
 
+alert("JS connected");
+
+
 // Configuration Constants
 const MINIMUM_ATTENDANCE = 75; // Percentage
 const STATUS_SAFE = 'SAFE';
@@ -473,4 +476,5 @@ function resetForm() {
 window.addEventListener('load', () => {
     addSubjectRow();
 });
+
 
